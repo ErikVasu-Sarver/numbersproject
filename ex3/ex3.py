@@ -9,10 +9,17 @@
 from math import sqrt
 from datetime import datetime
 
-n = input ("Enter a whole  number:")
-def F(n):
+n = input ("Enter a whole  number:") - 1
+#why do I have to add the "-1" to make this work?
+def Fib(note):
+    print "Finding the %d number in the Fibonacci Sequence." % (n)
     return ((1+sqrt(5))**n-(1-sqrt(5))**n)/(2**n*sqrt(5))
 
+#I'm having a difficult time determining how to print the result of the above
+#function.  I had to install jupyter to determine exactly what result I would
+#be getting from this function.
+answer = Fib(n)
+print "The answer is: %d" %(answer)
 
 print datetime.now().time()
 
